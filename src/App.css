@@ -1,38 +1,99 @@
-.App {
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  background-color: aliceblue
+}
+
+h1 {
+  background-color: #4794cf;
+  color: white;
+  padding: 1em;
+  font-size: 3em;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.form {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  padding: 2em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.form__input {
+  border: 1px solid #4794cf;
+  border-radius: 10px;
+  padding: 0.5em 1.5em;
+  font-size: 1em;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form__button {
+  background-color: #4794cf;
+  border: 1px solid #4794cf;
+  border-radius: 10px;
+  padding-inline: 1em;
+  color: white
+}
+
+.main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 1em
+}
+
+.todo--completed {
+  width: 70%;
+  font-size: 1.5em;
+  color: rgb(149, 176, 200);
+  border-radius: 15px;
+  padding: .5em;
+  box-shadow: -4px 5px 11px 3px #a8c4da;
+  background-color: white;
+  padding-left: 1em;
+}
+
+.todo--completed .todo--toggle-completed {
+  text-decoration: line-through;
+}
+
+.todo--notcompleted {
+  width: 70%;
+  font-size: 1.5em;
+  border-radius: 15px;
+  padding: .5em;
+  box-shadow: -4px 5px 11px 3px #a8c4da;
+  background-color: white;
+  padding-left: 1em;
+  color: #04487b;
+}
+
+
+.todo__button--remove {
+  background-color: #4794cf;
   color: white;
+  border: 0 solid #4794cf;
+  border-radius: 10px;
+  text-decoration: none;
+  padding-inline: .8em;
+  padding-block: .3em;
+  margin-left: 3em;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (min-width: 321px) {
+  .form__input {
+    width: 30em;
+    height: 3em
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (min-width: 769px) {
+  .form__input {
+    width: 50em
   }
 }
